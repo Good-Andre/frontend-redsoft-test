@@ -1,0 +1,12 @@
+// --- configs
+@import "mixins";
+@import "fonts";
+@import "settings";
+// --- components
+@import './components/preloader';
+@import './components/btn';
+@import './components/nav';
+@import './components/header';
+@import './components/main';
+@import './components/gallery-item';
+@import './components/footer';

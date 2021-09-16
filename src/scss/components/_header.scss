@@ -1,0 +1,35 @@
+.header {
+  padding: 24px 0;
+  border-bottom: 1px solid #e1e1e1;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__search {
+    display: flex;
+    width: 100%;
+    max-width: 416px;
+  }
+
+  &__search-input {
+    width: 100%;
+    height: 100%;
+    padding-left: 16px;
+    background-color: #f6f3f3;
+    border: 1px solid #e1e1e1;
+    border-right: none;
+
+    &::placeholder {
+      color: #776763;
+      opacity: 0.6;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid #b5b5b5;
+      border-right: none;
+    }
+  }
+}

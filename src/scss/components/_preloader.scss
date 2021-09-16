@@ -1,0 +1,68 @@
+$spinkit-size: 2.5em !default;
+$spinkit-spinner-color: #f4f6f9 !default;
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.sk-fading-circle {
+  position: relative;
+  width: $spinkit-size;
+  height: $spinkit-size;
+  margin: auto;
+  $circleCount: 12;
+  $animationDuration: 1.2s;
+
+  &.fade-out {
+    animation: 0.55s linear fade-out;
+  }
+
+  .sk-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      display: block;
+      width: 15%;
+      height: 15%;
+      margin: 0 auto;
+      content: '';
+      background-color: $spinkit-spinner-color;
+      border-radius: 100%;
+      animation: sk-fading-circle-delay $animationDuration infinite ease-in-out both;
+    }
+  }
+
+  @for $i from 2 through $circleCount {
+    .sk-circle-#{$i} {
+      transform: rotate((360deg / $circleCount * ($i - 1)));
+    }
+  }
+
+  @for $i from 2 through $circleCount {
+    .sk-circle-#{$i}:before {
+      animation-delay: (-$animationDuration + $animationDuration / $circleCount * ($i - 1));
+    }
+  }
+}
+
+@keyframes sk-fading-circle-delay {
+  0%,
+  39%,
+  100% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+}

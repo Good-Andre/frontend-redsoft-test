@@ -1,0 +1,65 @@
+.gallery-item {
+  width: 280px;
+
+  &__inner {
+    min-height: 168px;
+    padding: 20px;
+    border: 1px solid #e1e1e1;
+    border-top: none;
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    color: #343030;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__discount {
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.5rem;
+    color: #a0a0a0;
+    text-decoration: line-through;
+  }
+
+  &__price {
+    font-size: 1.14rem;
+    font-weight: bold;
+    line-height: 1.71rem;
+    color: #343030;
+  }
+
+  &__status {
+    display: none;
+    margin-top: 11px;
+    font-size: 1.14rem;
+    font-weight: bold;
+    line-height: 1.71rem;
+    color: #343030;
+  }
+
+  &.sold {
+    opacity: 0.5;
+
+    & .gallery-item__price {
+      display: none;
+    }
+
+    & .gallery-item__discount {
+      display: none;
+    }
+
+    & .gallery-item__status {
+      display: block;
+    }
+
+    & .gallery-item__btn {
+      display: none;
+    }
+  }
+}

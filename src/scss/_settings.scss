@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: inherit;
+  margin: 0;
+  font-family: "Merriweather", sans-serif;
+  font-size: 1rem;
+  background-color: #f6f3f3;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+}
+
+._container {
+  max-width: 1244px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.71rem; // 24px
+  font-weight: bold;
+  line-height: 2.57rem; // 36px
+}
+
+h2 {
+  font-size: 1.28rem; // 18px
+  font-weight: normal;
+  line-height: 1.93rem; // 27px
+}

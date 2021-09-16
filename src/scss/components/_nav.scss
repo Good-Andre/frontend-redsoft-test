@@ -1,0 +1,31 @@
+.nav {
+  display: flex;
+  width: 100%;
+  max-width: 630px;
+
+  &__logo {
+    flex-shrink: 0;
+    max-width: 48px;
+    min-height: 48px;
+    margin-right: 35px;
+    background-color: #343030;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  &__link {
+    padding: 10px 0;
+    color: #555;
+    transition: color .1s;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
