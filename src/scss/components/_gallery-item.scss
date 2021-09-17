@@ -46,11 +46,7 @@
   &.sold {
     opacity: 0.5;
 
-    & .gallery-item__price {
-      display: none;
-    }
-
-    & .gallery-item__discount {
+    & .gallery-item__price-wrapper {
       display: none;
     }
 
