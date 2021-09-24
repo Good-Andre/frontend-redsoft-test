@@ -90,28 +90,22 @@ function loadProducts() {
       }
     }
 
-  // console.log('Корзина после загрузки', cart); // dev
+  console.log('Корзина после Загрузки из localStorage', cart); // dev
 }
 
 function removeProduct(btn) {
-  let oldCart = cart;
-  cart = [];
-
-  for (let i = 0; i < oldCart.length; i++) {
-    if (
-      oldCart[i].id !==
-      +btn.dataset.id
-    ) {
-      cart.push(oldCart[i]);
+  for (let i = 0; i < cart.length; i++) {
+    if ( cart[i].id === +btn.dataset.id) {
+      cart.splice([i], 1)
     }
   }
 
-  // console.log('Корзина после изменения', cart); // dev
+  console.log('Корзина после Удаления элемента', cart); // dev
   localStorage.setItem('cartTestRedsoft', JSON.stringify(cart));
 }
 
 function saveProduct(data) {
   cart.push(data);
-  // console.log('Корзина после добавления', cart); // dev
+  console.log('Корзина после Добавления элемента', cart); // dev
   localStorage.setItem('cartTestRedsoft', JSON.stringify(cart));
 }
